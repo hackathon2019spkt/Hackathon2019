@@ -1,0 +1,16 @@
+D:\Project\C#\HackathonProject\HackathonProject\bin\Debug\HackathonProject.exe.config
+D:\Project\C#\HackathonProject\HackathonProject\bin\Debug\HackathonProject.exe
+D:\Project\C#\HackathonProject\HackathonProject\bin\Debug\HackathonProject.pdb
+D:\Project\C#\HackathonProject\HackathonProject\bin\Debug\MetroFramework.dll
+D:\Project\C#\HackathonProject\HackathonProject\bin\Debug\MetroFramework.Fonts.dll
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.AddValue.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Form1.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.frm_About.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.frm_BieuDo.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.History.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Properties.Resources.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.csproj.GenerateResource.Cache
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.exe
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.pdb
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Upload.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Detail.resources
