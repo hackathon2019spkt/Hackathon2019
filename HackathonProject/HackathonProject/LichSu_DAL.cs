@@ -37,7 +37,7 @@ namespace HackathonProject
         public static bool InsertLichSu(LichSu lichSu)
         {
             /*Set query.*/
-            string query = String.Format("INSERT INTO LICHSU (MALICHSU,DOCAOBANDAU,BANKINH,KHOILUONGRIENGCHAT,KHOILUONGRIENGVAT) VALUES ('{0}','{1}','{2}','{3}','{4}')", lichSu.MaLichSu, lichSu.DoCaoBanDau, lichSu.BanKinh, lichSu.KhoiLuongRiengChat,lichSu.KhoiLuongRiengVat);
+            string query = String.Format("INSERT INTO LICHSU (MALICHSU,DOCAOBANDAU,BANKINH,KHOILUONGRIENGCHAT,KHOILUONGRIENGVAT, THOIGIANTONGHOP) VALUES ('{0}','{1}','{2}','{3}','{4}', '{5}')", lichSu.MaLichSu, lichSu.DoCaoBanDau, lichSu.BanKinh, lichSu.KhoiLuongRiengChat,lichSu.KhoiLuongRiengVat,lichSu.ThoiGianTongHop);
             bool result = DataProvider.QueryExecuteNonQuery(query);/*Execute query in layer dataprovider.*/
             return result;
 
@@ -49,6 +49,24 @@ namespace HackathonProject
             string query = String.Format("DELETE FROM LICHSU WHERE MALICHSU='{0}'", maLichSu);
             bool result = DataProvider.QueryExecuteNonQuery(query);/*Execute query in layer dataprovider.*/
             return result;
+        }
+
+        public static string quantityElement()
+        {
+
+            string query = String.Format("SELECT * FROM LICHSU");
+            DataTable dataTable = new DataTable();//Can destroy.
+            dataTable = DataProvider.QueryDataReader(query);
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                return dataTable.Rows[dataTable.Rows.Count - 1]["MALICHSU"].ToString();
+            }
+            else
+            {
+                return "LS-0";
+            }
+
         }
     }
 }

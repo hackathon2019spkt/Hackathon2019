@@ -40,15 +40,6 @@ namespace HackathonProject
         {
             DragForm.Release();
         }
-        //public void SetData(double _Velocity, double _Accerlation, double _Distance, double _time)
-        //{
-        //    //DataPoint PVelocity = new DataPoint(_time, _Velocity);
-        //    //DataPoint PAccerlation = new DataPoint(_time, _Accerlation);
-        //    //DataPoint PDistance = new DataPoint(_time, _Distance);
-        //    //chartVelocity.Series["SVelocity"].Points.Add(PVelocity);
-        //    //chartAccerlation.Series["SAccerlation"].Points.Add(PAccerlation);
-        //    //chartDistance.Series["SDistance"].Points.Add(PDistance);
-        //}
         public void SetData(double _Velocity, double _Accerlation, double _Distance, double _time)
         {
             DataPoint PVelocity = new DataPoint(_time, _Velocity);
@@ -95,13 +86,21 @@ namespace HackathonProject
         {
             this.Show();
             labDateTime.Text = DateTime.Now.ToString();
+            labDateTime.Visible = true;
+            SetVisible(false);
             pictureBox2.Visible = false;
             Bitmap frmBitmap = new Bitmap(this.Width, this.Height, PixelFormat.Format32bppArgb);
             this.DrawToBitmap(frmBitmap, new Rectangle(0, 0, this.Width, this.Height));
             Graphics grp = Graphics.FromImage(frmBitmap);
             frmBitmap.Save(filename, ImageFormat.Png);
             pictureBox2.Visible = true;
+            SetVisible(true);
             this.Close();
+        }
+        private void SetVisible(bool visible)
+        {
+            label8.Visible = label9.Visible = label.Visible = lab.Visible = visible;
+            labTime.Visible = labVelocity.Visible = labAccerlation.Visible = labDistance.Visible = visible;
         }
     }
 }

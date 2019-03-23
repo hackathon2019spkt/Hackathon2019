@@ -27,6 +27,8 @@ namespace HackathonProject
         static int i;
         private void btn_OAdd_Click(object sender, EventArgs e)
         {
+            if (btn_OValue.Text == "" || btn_OName.Text == "")
+                return;
             i =dtgv_Vat.RowCount;
             bool result;
             i++;
@@ -64,13 +66,19 @@ namespace HackathonProject
         List<Vat> lstVatThiNghiem;
         private void AddValue_Load(object sender, EventArgs e)
         {
+            
             lstVatThiNghiem = Vat_BUL.LoadVat();
             dtgv_Vat.DataSource = Vat_BUL.LoadVat();
-            dtgv_Vat.Columns[0].HeaderText = "MA";
-
+            dtgv_Vat.Columns[0].HeaderText = "ID";
+            dtgv_Vat.Columns[1].HeaderText = "Name";
+            dtgv_Vat.Columns[2].HeaderText = "Density";
+            dtgv_Vat.Columns[3].HeaderText = "Can Delete";
             lstDungDich = DungDich_BUL.LoadDungDich();
             dtgv_DungDich.DataSource = DungDich_BUL.LoadDungDich();
-
+            dtgv_DungDich.Columns[0].HeaderText = "ID";
+            dtgv_DungDich.Columns[1].HeaderText = "Name";
+            dtgv_DungDich.Columns[2].HeaderText = "Density";
+            dtgv_DungDich.Columns[3].HeaderText = "Can Delete";
         }
 
         private void btn_ODelete_Click(object sender, EventArgs e)
@@ -103,11 +111,13 @@ namespace HackathonProject
         static int j;
         private void btn_LAdd_Click(object sender, EventArgs e)
         {
-            j = dtgv_DungDich.RowCount;
+            if (btn_LName.Text == "" || btn_LValue.Text == "")
+                return;
+            j = dtgv_DungDich.RowCount+1;
             bool result;
-            i++;
+            
             DungDich newDungDich = new DungDich();
-            if (Validate(btn_OName.Text, btn_OValue.Text))
+            if (Validate(btn_LName.Text, btn_LValue.Text))
             {
                 newDungDich.MaDungDich = maDungDich + j;
                 newDungDich.TenDungDich = btn_LName.Text;

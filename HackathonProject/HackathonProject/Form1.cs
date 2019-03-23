@@ -22,12 +22,14 @@ namespace HackathonProject
         public double docaobandau;
         public double bankinhvat = 0.025;
         // Cờ xác định vật đang rơi
-        public bool Is_Falling = false;
+        public static bool Is_Falling = false;
         // Vị trí giữa vật
         public int Object_Mid_X;
         public int Object_Mid_Y;
         //Form biểu đồ
         frm_BieuDo frmChart;
+        public static bool ischangetoupload = false;
+        public static SaveExp upload;
         public Form1()
         {
             InitializeComponent();
@@ -144,6 +146,11 @@ namespace HackathonProject
                 flagForm = 0;
                 RemoveBasicPanel(true);
                 pnl_Board.Controls.Remove(UploadForm);
+                if (ischangetoupload)
+                {
+                    ReProcess();
+                    ischangetoupload = false;
+                }
             }
         }
 
@@ -165,6 +172,51 @@ namespace HackathonProject
             }
 
         }
+
+        public void ReProcess()
+        {
+            if (!Is_Falling && upload != null)
+            {
+                pbx_Object.Location = new Point(upload.X, upload.Y);
+                docaobandau = ((double)(pnl_Board.Size.Height - (pbx_Object.Location.Y + pbx_Object.Size.Height))) / 1000;
+                khoicau = new KhoiCau(upload.KhoiLuongRiengVat, upload.BanKinh, upload.KhoiLuongRiengChat, docaobandau);
+                    // Khởi tạo giá trị ban đầu
+                khoicau.SetValue();
+                // Khởi tạo giá trị cho các vector
+                muiten = new MuiTen();
+                // Khởi tạo gia tốc trọng trường cho mui ten
+                muiten.p = -9.81;
+                // Tắt thước đo
+                pbx_Ruler.Visible = false;
+                khoicau.V = upload.Vt;
+                khoicau.a = upload.A;
+
+                lbl_BanKinh.Text = (khoicau.R * 2) + " m";
+                trb_BanKinh.Value = (int) (khoicau.R * 2 * 1000);
+                
+                for (int i = 0; i < cbx_ChatLong.Items.Count; i++)
+                {
+                    if (cbx_ChatLong.Items[i].ToString() == upload.KhoiLuongRiengChat.ToString())
+                    {
+                        cbx_ChatLong.SelectedIndex = i;
+                    }
+                }
+
+                for (int i = 0; i < cbx_Vat.Items.Count; i++)
+                {
+                    if (cbx_Vat.Items[i].ToString() == upload.KhoiLuongRiengVat.ToString())
+                    {
+                        cbx_Vat.SelectedIndex = i;
+                    }
+                }
+                frmChart.SetLabelInitalHeight(docaobandau);
+                // Xác nhận đang rơi
+                Is_Falling = true;
+                frmChart.ResetData();
+                tm_Main.Start();
+            }
+        }
+
         #endregion
 
         #region Basic function form: di chuyển form, exit, btn_Minimize_Click
@@ -515,6 +567,7 @@ namespace HackathonProject
             if (pbx_Object.Location.Y + pbx_Object.Size.Height > pnl_Board.Size.Height || (khoiluongriengchatlong == khoiluongriengvat && khoicau.vt == 0))
             {
                 TimerStopAcction();
+                AddHistory();
             }
         }
         
@@ -658,9 +711,33 @@ namespace HackathonProject
         private void btn_Stop_Click(object sender, EventArgs e)
         {
             TimerStopAcction();
+            AddHistory();
             btn_Resume.Visible = btn_Stop.Visible = false;
         }
-        
+
+        string IDLichSu = "ID-";
+        int maLichSu;
+        private void AddHistory()
+        {
+            try
+            {
+                maLichSu = int.Parse(LichSu_DAL.quantityElement().Substring(3)) + 1;
+                LichSu newLichSu = new LichSu();
+                newLichSu.MaLichSu = IDLichSu+maLichSu;
+                newLichSu.DoCaoBanDau = docaobandau.ToString();
+                newLichSu.BanKinh = khoicau.R.ToString();
+                newLichSu.KhoiLuongRiengChat = khoiluongriengchatlong.ToString();
+                newLichSu.KhoiLuongRiengVat = khoiluongriengvat.ToString();
+                newLichSu.ThoiGianTongHop = khoicau.time.ToString();
+                bool result = LichSu_BUL.InsertLichSu(newLichSu);
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.ToString());
+                MessageBox.Show("Invalid dang an oshi!");
+            }
+        }
+
         // Xét vị trí của vật có đang trong nước
         private bool IsInLiquid()
         {

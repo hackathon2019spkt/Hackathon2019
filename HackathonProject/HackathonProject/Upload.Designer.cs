@@ -31,10 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Upload));
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Load = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dtgv_SaveExp = new System.Windows.Forms.DataGridView();
+            this.btn_ODelete = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_SaveExp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_ODelete)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -70,14 +73,14 @@
             this.btn_Load.IconVisible = true;
             this.btn_Load.IconZoom = 90D;
             this.btn_Load.IsTab = false;
-            this.btn_Load.Location = new System.Drawing.Point(309, 625);
+            this.btn_Load.Location = new System.Drawing.Point(339, 625);
             this.btn_Load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(183)))), ((int)(((byte)(84)))));
             this.btn_Load.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(162)))), ((int)(((byte)(77)))));
             this.btn_Load.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Load.selected = false;
-            this.btn_Load.Size = new System.Drawing.Size(290, 55);
+            this.btn_Load.Size = new System.Drawing.Size(236, 55);
             this.btn_Load.TabIndex = 20;
             this.btn_Load.Text = "Load Experiment";
             this.btn_Load.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,11 +127,25 @@
             this.dtgv_SaveExp.Size = new System.Drawing.Size(806, 509);
             this.dtgv_SaveExp.TabIndex = 21;
             // 
+            // btn_ODelete
+            // 
+            this.btn_ODelete.Image = ((System.Drawing.Image)(resources.GetObject("btn_ODelete.Image")));
+            this.btn_ODelete.ImageActive = null;
+            this.btn_ODelete.Location = new System.Drawing.Point(582, 625);
+            this.btn_ODelete.Name = "btn_ODelete";
+            this.btn_ODelete.Size = new System.Drawing.Size(55, 55);
+            this.btn_ODelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_ODelete.TabIndex = 24;
+            this.btn_ODelete.TabStop = false;
+            this.btn_ODelete.Zoom = 10;
+            this.btn_ODelete.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Upload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            this.Controls.Add(this.btn_ODelete);
             this.Controls.Add(this.dtgv_SaveExp);
             this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.label5);
@@ -136,6 +153,7 @@
             this.Size = new System.Drawing.Size(925, 755);
             this.Load += new System.EventHandler(this.Upload_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_SaveExp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_ODelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +164,6 @@
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Load;
         private System.Windows.Forms.DataGridView dtgv_SaveExp;
+        private Bunifu.Framework.UI.BunifuImageButton btn_ODelete;
     }
 }

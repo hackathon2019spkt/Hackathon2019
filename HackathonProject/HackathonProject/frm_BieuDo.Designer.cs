@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BieuDo));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -196,31 +196,31 @@
             // chartAccerlation
             // 
             this.chartAccerlation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartAccerlation.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.chartAccerlation.Legends.Add(legend1);
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            chartArea4.Name = "ChartArea1";
+            this.chartAccerlation.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            legend4.ForeColor = System.Drawing.Color.White;
+            legend4.Name = "Legend1";
+            this.chartAccerlation.Legends.Add(legend4);
             this.chartAccerlation.Location = new System.Drawing.Point(364, 119);
             this.chartAccerlation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartAccerlation.Name = "chartAccerlation";
             this.chartAccerlation.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartAccerlation.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(162)))), ((int)(((byte)(77)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "SAccerlation";
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chartAccerlation.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "SAccerlation";
+            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chartAccerlation.Series.Add(series4);
             this.chartAccerlation.Size = new System.Drawing.Size(300, 300);
             this.chartAccerlation.TabIndex = 39;
             this.chartAccerlation.Text = "chart3";
@@ -235,6 +235,7 @@
             this.labDateTime.Size = new System.Drawing.Size(58, 23);
             this.labDateTime.TabIndex = 38;
             this.labDateTime.Text = "Time:";
+            this.labDateTime.Visible = false;
             // 
             // labDistance
             // 
@@ -297,7 +298,7 @@
             this.labLiquid.AutoSize = true;
             this.labLiquid.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labLiquid.ForeColor = System.Drawing.Color.White;
-            this.labLiquid.Location = new System.Drawing.Point(359, 693);
+            this.labLiquid.Location = new System.Drawing.Point(275, 693);
             this.labLiquid.Name = "labLiquid";
             this.labLiquid.Size = new System.Drawing.Size(26, 30);
             this.labLiquid.TabIndex = 33;
@@ -311,7 +312,7 @@
             this.labObject.AutoSize = true;
             this.labObject.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labObject.ForeColor = System.Drawing.Color.White;
-            this.labObject.Location = new System.Drawing.Point(359, 635);
+            this.labObject.Location = new System.Drawing.Point(275, 635);
             this.labObject.Name = "labObject";
             this.labObject.Size = new System.Drawing.Size(26, 30);
             this.labObject.TabIndex = 32;
@@ -325,7 +326,7 @@
             this.labRadius.AutoSize = true;
             this.labRadius.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labRadius.ForeColor = System.Drawing.Color.White;
-            this.labRadius.Location = new System.Drawing.Point(359, 577);
+            this.labRadius.Location = new System.Drawing.Point(275, 577);
             this.labRadius.Name = "labRadius";
             this.labRadius.Size = new System.Drawing.Size(57, 30);
             this.labRadius.TabIndex = 31;
@@ -339,7 +340,7 @@
             this.labHeight.AutoSize = true;
             this.labHeight.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labHeight.ForeColor = System.Drawing.Color.White;
-            this.labHeight.Location = new System.Drawing.Point(359, 519);
+            this.labHeight.Location = new System.Drawing.Point(275, 519);
             this.labHeight.Name = "labHeight";
             this.labHeight.Size = new System.Drawing.Size(57, 30);
             this.labHeight.TabIndex = 30;
@@ -478,7 +479,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(971, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -534,31 +535,31 @@
             // chartDistance
             // 
             this.chartDistance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartDistance.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            legend2.ForeColor = System.Drawing.Color.White;
-            legend2.Name = "Legend1";
-            this.chartDistance.Legends.Add(legend2);
+            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea5.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.MajorGrid.Enabled = false;
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            chartArea5.Name = "ChartArea1";
+            this.chartDistance.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            legend5.ForeColor = System.Drawing.Color.White;
+            legend5.Name = "Legend1";
+            this.chartDistance.Legends.Add(legend5);
             this.chartDistance.Location = new System.Drawing.Point(684, 119);
             this.chartDistance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartDistance.Name = "chartDistance";
             this.chartDistance.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             this.chartDistance.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))))};
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "SDistance";
-            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chartDistance.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "SDistance";
+            series5.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chartDistance.Series.Add(series5);
             this.chartDistance.Size = new System.Drawing.Size(300, 300);
             this.chartDistance.TabIndex = 2;
             this.chartDistance.Text = "chart3";
@@ -569,31 +570,31 @@
             // chartVelocity
             // 
             this.chartVelocity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.MaximumAutoSize = 100F;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            chartArea3.Name = "ChartArea1";
-            this.chartVelocity.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.Name = "Legend1";
-            this.chartVelocity.Legends.Add(legend3);
+            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX.MajorGrid.Enabled = false;
+            chartArea6.AxisX.MaximumAutoSize = 100F;
+            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.MajorGrid.Enabled = false;
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            chartArea6.Name = "ChartArea1";
+            this.chartVelocity.ChartAreas.Add(chartArea6);
+            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(63)))), ((int)(((byte)(89)))));
+            legend6.ForeColor = System.Drawing.Color.White;
+            legend6.Name = "Legend1";
+            this.chartVelocity.Legends.Add(legend6);
             this.chartVelocity.Location = new System.Drawing.Point(35, 119);
             this.chartVelocity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartVelocity.Name = "chartVelocity";
             this.chartVelocity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartVelocity.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.Red};
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "SVelocity";
-            this.chartVelocity.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "SVelocity";
+            this.chartVelocity.Series.Add(series6);
             this.chartVelocity.Size = new System.Drawing.Size(300, 300);
             this.chartVelocity.TabIndex = 0;
             this.chartVelocity.Text = "chart1";
