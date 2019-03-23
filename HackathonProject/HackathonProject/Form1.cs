@@ -43,7 +43,6 @@ namespace HackathonProject
         AddValue AddValueForm;
         History HistoryForm;
         Upload UploadForm;
-        Detail DetailForm;
         private void LoadData()
         {
             frmChart = new frm_BieuDo();
@@ -148,22 +147,6 @@ namespace HackathonProject
             }
         }
 
-        private void btn_Detail_Click(object sender, EventArgs e)
-        {
-            if (flagForm == 0)
-            {
-                RemoveBasicPanel(false);
-                DetailForm = new Detail();
-                pnl_Board.Controls.Add(DetailForm);
-                flagForm = 40;
-            }
-            else if (flagForm == 40)
-            {
-                flagForm = 0;
-                RemoveBasicPanel(true);
-                pnl_Board.Controls.Remove(DetailForm);
-            }
-        }
         private void btn_BieuDo_Click(object sender, EventArgs e)
         {
             frmChart.Show();
@@ -346,7 +329,7 @@ namespace HackathonProject
             {
                 khoiluongriengvat = double.Parse(cbx_Vat.SelectedValue.ToString());
                 if (frmChart != null)
-                    frmChart.SetLabelObject(cbx_Vat.SelectedItem.ToString());
+                    frmChart.SetLabelObject(cbx_Vat.SelectedValue.ToString());
             }
                 
 
@@ -358,7 +341,7 @@ namespace HackathonProject
             {
                 khoiluongriengchatlong = double.Parse(cbx_ChatLong.SelectedValue.ToString());
                 if (frmChart != null)
-                    frmChart.SetLabelLiquid(cbx_ChatLong.SelectedItem.ToString());
+                    frmChart.SetLabelLiquid(cbx_ChatLong.SelectedValue.ToString());
             }             
         }
 
@@ -398,6 +381,7 @@ namespace HackathonProject
                 Object_Y = e.Y;
                 SetObjectHeight();
                 pbx_Ruler.Visible = true;
+                frmChart.ResetData();
             }
         }
         private void pbx_Object_MouseMove(object sender, MouseEventArgs e)
@@ -449,7 +433,9 @@ namespace HackathonProject
             cbx_ChatLong.Enabled = cbx_Vat.Enabled = EnableValue;
             trb_BanKinh.Enabled = EnableValue;
             btn_Add.Enabled = btn_History.Enabled = EnableValue;
+            btn_Save.Enabled = btn_Upload.Enabled = btn_XuatFile.Enabled = EnableValue;
             pbx_Object.Enabled = EnableValue;  
+
         }
         // Set độ cao vật cho label
         private void SetObjectHeight()

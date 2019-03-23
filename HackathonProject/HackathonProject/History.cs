@@ -21,8 +21,7 @@ namespace HackathonProject
         private void History_Load(object sender, EventArgs e)   
         {
             lstLichSu = LichSu_BUL.LoadLichSu();
-            dtgv_LishSu.DataSource = LichSu_BUL.LoadLichSu();
-            
+            dtgv_LishSu.DataSource = LichSu_BUL.LoadLichSu();          
         }
 
         private void btn_ODelete_Click(object sender, EventArgs e)

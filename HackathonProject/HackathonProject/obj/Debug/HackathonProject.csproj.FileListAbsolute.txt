@@ -13,4 +13,4 @@ D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.cspro
 D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.exe
 D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.pdb
 D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Upload.resources
-D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Detail.resources
+D:\Project\C#\HackathonProject\HackathonProject\obj\Debug\HackathonProject.csprojResolveAssemblyReference.cache

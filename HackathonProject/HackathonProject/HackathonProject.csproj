@@ -69,12 +69,6 @@
       <DependentUpon>AddValue.cs</DependentUpon>
     </Compile>
     <Compile Include="DataProvider.cs" />
-    <Compile Include="Detail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Detail.Designer.cs">
-      <DependentUpon>Detail.cs</DependentUpon>
-    </Compile>
     <Compile Include="DungDich.cs" />
     <Compile Include="DungDich_BUL.cs" />
     <Compile Include="DungDich_DAL.cs" />
@@ -126,9 +120,6 @@
     <Compile Include="Vat_DAL.cs" />
     <EmbeddedResource Include="AddValue.resx">
       <DependentUpon>AddValue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Detail.resx">
-      <DependentUpon>Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -23,6 +23,10 @@ namespace HackathonProject
         {
             lstSave = SaveExp_BUL.LoadSave();
             dtgv_SaveExp.DataSource = SaveExp_BUL.LoadSave();
+        }
+
+        private void btn_Load_Click(object sender, EventArgs e)
+        {
 
         }
     }
